@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Закупочная процедура</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Закупочная процедура</h1>
+        <div id="initial-stage">
+            <h2>Основная процедура</h2>
+            <ul id="initial-bids">
+                <li>Участник 1: 100 денежных единиц</li>
+                <li>Участник 2: 1000 денежных единиц</li>
+                <li>Участник 3: 5000 денежных единиц</li>
+            </ul>
+        </div>
+        <button id="start-negotiation" onclick="startNegotiation()">Объявить переторжку</button>
+        <div id="negotiation-stage" style="display: none;">
+            <h2>Переторжка</h2>
+            <div id="negotiation-bids">
+                <h3>Подать новую заявку</h3>
+                <input type="number" id="participant1-bid" placeholder="Участник 1">
+                <input type="number" id="participant2-bid" placeholder="Участник 2">
+                <input type="number" id="participant3-bid" placeholder="Участник 3">
+                <button onclick="submitNegotiationBids()">Подать</button>
+            </div>
+        </div>
+        <div id="final-stage" style="display: none;">
+            <h2>Итоги закупочной процедуры</h2>
+            <p id="winner-info"></p>
+            <p id="not-lowest-price-info"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
